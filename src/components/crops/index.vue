@@ -3,17 +3,17 @@
 
         <q-card flat class="row full-width">
             <q-card-section class="col-7 q-gutter-y-xs">
-                <q-input outlined v-model="form.claimant_id" placeholder="Claimant ID"/>
+                <q-input dense outlined v-model="form.claimant_id" placeholder="Claimant ID"/>
                 <q-input outlined v-model="form.first_name" placeholder="Claimant First Name" :error="$v.form.first_name.$error"/>
                 <q-input outlined v-model="form.last_name" placeholder="Claimant Last Name" :error="$v.form.last_name.$error"/>
-                <q-input outlined v-model="form.other_name" placeholder="Claimant Other Names"/>
+                <!-- <q-input outlined v-model="form.other_name" placeholder="Claimant Other Names"/> -->
                 <q-input outlined v-model="form.location" placeholder="Claimant Location"/>
-                <q-input outlined v-model="form.community" placeholder="Claimant Community"/>
+                <!-- <q-input outlined v-model="form.community" placeholder="Claimant Community"/> -->
                 <q-input outlined v-model="form.coordinates" placeholder="Coodinates"/>                
             </q-card-section>
             <q-card-section class="col-5">                
-                <img :src="image ? form.image : 'statics/user.jpg'" width="30%">
-                <img :src="form.c_signature ? form.c_signature : ''" width="30%">
+                <img :src="image ? form.image : 'statics/user.jpg'" width="40%">
+                <img :src="form.c_signature ? form.c_signature : ''" width="40%">
                 <div v-if="!image">
                     <input type="file" @change="onFileChange">
                 </div>
@@ -124,8 +124,6 @@ export default {
         form: {
             first_name: { required },
             last_name: { required },
-            c_signature: { required },
-            image: { required },
         }
     },
 

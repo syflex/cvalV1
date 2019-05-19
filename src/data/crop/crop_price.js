@@ -1,422 +1,6 @@
 
 const data = [
-    // economic tree
     
-        {
-            crop: 'Mango', data: [
-                {label: 'Mature', value: '3500'},{label: 'Immature', value: '1750'},{label: 'Seedling', value: '875'}
-            ]
-        }, 
-        {
-            crop: 'Mango (Inproved)', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        }, 
-        {
-            crop: 'Dorowa', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        },
-        {
-            crop: 'Dabino', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        }, 
-        {
-            crop: 'Gamji', data: [
-                {label: 'Mature', value: '10000'},{label: 'Immature', value: '5000'},{label: 'Seedling', value: '2500'}
-            ]
-        },
-        {
-            crop: 'Kadauya', data: [
-                {label: 'Mature', value: '10000'},{label: 'Immature', value: '5000'},{label: 'Seedling', value: '2500'}
-            ]
-        }, 
-        {
-            crop: 'Rimi', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        },
-        {
-            crop: 'Tsamia', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        },
-        {
-            crop: 'Madaci', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        }, 
-        {
-            crop: 'kanya', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        },
-        {
-            crop: 'Marke', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        }, 
-        {
-            crop: 'Gawo', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Aduwa', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        }, 
-        {
-            crop: 'Goruba', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        },
-        {
-            crop: 'Giginya', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        }, 
-        {
-            crop: 'Baobano (Kuka)', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        },
-        {
-            crop: 'Madobiya', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        }, 
-        {
-            crop: 'Goba', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        },
-        {
-            crop: 'Gwanda', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        }, 
-        {
-            crop: 'Lemun Zaki', data: [
-                {label: 'Mature', value: '8000'},{label: 'Immature', value: '4000'},{label: 'Seedling', value: '2000'}
-            ]
-        },
-        {
-            crop: 'Lemun Tsami', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        },
-        {
-            crop: 'Lemon', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        },
-        {
-            crop: 'Lime', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        },
-        {
-            crop: 'Lemun Tangerine', data: [
-                {label: 'Mature', value: '8000'},{label: 'Immature', value: '4000'},{label: 'Seedling', value: '2000'}
-            ]
-        }, 
-        {
-            crop: 'Albijuja', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Neem', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        }, 
-        {
-            crop: 'Bauran Rafi', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Kashiya', data: [
-                {label: 'Mature', value: '2500'},{label: 'Immature', value: '1250'},{label: 'Seedling', value: '625'}
-            ]
-        }, 
-        {
-            crop: 'Dalbejiya', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Dusha', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        }, 
-        {
-            crop: 'Gurijiya', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Gawasa', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        },
-        {
-            crop: 'Katsari', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        }, 
-        {
-            crop: 'Kurna', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        },
-        {
-            crop: 'Kirya', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        }, 
-        {
-            crop: 'Maje', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        },
-        {
-            crop: 'Franshana', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        }, 
-        {
-            crop: 'Sansami', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        },
-        {
-            crop: 'Baushe', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Danya', data: [
-                {label: 'Mature', value: '3500'},{label: 'Immature', value: '1750'},{label: 'Seedling', value: '875'}
-            ]
-        }, 
-        {
-            crop: 'Fasadabur', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Ruman', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Magariya', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Taura', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Kalgo Tree', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Kalgo Shub', data: [
-                {label: 'Mature', value: '100'},{label: 'Immature', value: '50'},{label: 'Seedling', value: '25'}
-            ]
-        }, 
-        {
-            crop: 'Ayaba', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Chediya', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Durumi', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Kawari', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Lalle', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        }, 
-        {
-            crop: 'Morianga Alicafera', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        },
-        {
-            crop: 'Giyaya', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Dinya', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        }, 
-        {
-            crop: 'Grape Fruit', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        },
-        {
-            crop: 'Kantakara', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        }, 
-        {
-            crop: 'Matsagi', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        },
-        {
-            crop: 'Geza', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        }, 
-        {
-            crop: 'Doka', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Turare', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Gmshina', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Gakwara(Domesticated)', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        },
-        {
-            crop: 'Gakwara(Wild)', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        }, 
-        {
-            crop: 'Zuwa', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        },
-        {
-            crop: 'Aliliba', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        }, 
-        {
-            crop: 'Goro', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Cashew', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Baure', data: [
-                {label: 'Mature', value: '1000'},{label: 'Immature', value: '500'},{label: 'Seedling', value: '250'}
-            ]
-        }, 
-        {
-            crop: 'Gwanda Dawa', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Faru', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Zogale', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        },
-        {
-            crop: 'Palm Tree', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        }, 
-        {
-            crop: 'Kawo', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Atili', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Passion Fruit', data: [
-                {label: 'Mature', value: '5000'},{label: 'Immature', value: '2500'},{label: 'Seedling', value: '1250'}
-            ]
-        }, 
-        {
-            crop: 'Kuhu Tree', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        },
-        {
-            crop: 'Sabara Tree', data: [
-                {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
-            ]
-        }, 
-        {
-            crop: 'Sabara Shrub', data: [
-                {label: 'Mature', value: '100'},{label: 'Immature', value: '50'},{label: 'Seedling', value: '25'}
-            ]
-        },
-        {
-            crop: 'Shuwaka', data: [
-                {label: 'Mature', value: '500'},{label: 'Immature', value: '250'},{label: 'Seedling', value: '125'}
-            ]
-        }, 
-        {
-            crop: 'Nuhu', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        },
-        {
-            crop: 'Coconut', data: [
-                {label: 'Mature', value: '2000'},{label: 'Immature', value: '1000'},{label: 'Seedling', value: '500'}
-            ]
-        }, 
-        {
-            crop: 'Tsada', data: [
-                {label: 'Mature', value: '3000'},{label: 'Immature', value: '1500'},{label: 'Seedling', value: '750'}
-            ]
-        }, 
-        {
-            crop: 'Bagaruwa', data: [
-                {label: 'Mature', value: '4000'},{label: 'Immature', value: '2000'},{label: 'Seedling', value: '1000'}
-            ]
-        },
 
 
 
@@ -429,6 +13,11 @@ const data = [
         {
             crop: 'Guinea Corn',  data: [
                 {label: 'Mature', value: '50000'},{label: 'Immature', value: '25000'},{label: 'Seedling', value: '12500'}
+            ]
+        },
+        {
+            crop: 'Cowpea',  data: [
+                {label: 'Mature', value: '60000'},{label: 'Immature', value: '60000'},{label: 'Seedling', value: '15000'}
             ]
         },
         {
@@ -463,7 +52,7 @@ const data = [
         }, 
         {
             crop: 'Cocoyam',  data: [
-                {label: 'Mature', value: '80000'},{label: 'Immature', value: '40000'},{label: 'Seedling', value: '20000'}
+                {label: 'Mature', value: '25000'},{label: 'Immature', value: '12500'},{label: 'Seedling', value: '6250'}
             ]
         },
         {
@@ -502,7 +91,7 @@ const data = [
             ]
         }, 
         {
-            crop: 'Spinach, Alehu',  data: [
+            crop: 'Spinach/Alehu',  data: [
                 {label: 'Mature', value: '10000'},{label: 'Immature', value: '5000'},{label: 'Seedling', value: '2500'}
             ]
         }, 
@@ -527,12 +116,12 @@ const data = [
             ]
         }, 
         {
-            crop: 'Mix cropping (Including Yam)',  data: [
+            crop: 'Mix Cropping Including Yam',  data: [
                 {label: 'Mature', value: '120000'},{label: 'Immature', value: '60000'},{label: 'Seedling', value: '30000'}
             ]
         },
         {
-            crop: 'Mix cropping (Excluding Yam)',  data: [
+            crop: 'Mix Cropping Excluding Yam',  data: [
                 {label: 'Mature', value: '100000'},{label: 'Immature', value: '50000'},{label: 'Seedling', value: '25000'}
             ]
         },
@@ -557,8 +146,13 @@ const data = [
             ]
         }, 
         {
-            crop: 'Tiger nuts(Aya)',  data: [
+            crop: 'Tigernuts(Aya)',  data: [
                 {label: 'Mature', value: '50000'},{label: 'Immature', value: '25000'},{label: 'Seedling', value: '12500'}
+            ]
+        }, 
+        {
+            crop: 'Babaranuts',  data: [
+                {label: 'Mature', value: '80000'},{label: 'Immature', value: '40000'},{label: 'Seedling', value: '20000'}
             ]
         }, 
         {
@@ -577,7 +171,7 @@ const data = [
             ]
         },
         {
-            crop: 'Tobaka(Taba)',  data: [
+            crop: 'Tobacco(Taba)',  data: [
                 {label: 'Mature', value: '10000'},{label: 'Immature', value: '5000'},{label: 'Seedling', value: '2500'}
             ]
         }, 
@@ -632,15 +226,20 @@ const data = [
             ]
         }, 
         {
-            crop: 'Water Melon',  data: [
+            crop: 'Melon',  data: [
                 {label: 'Mature', value: '20000'},{label: 'Immature', value: '10000'},{label: 'Seedling', value: '5000'}
             ]
         },
         {
-            crop: 'Govt/Grazing Recours',  data: [
-                {label: 'Mature', value: '300000'},{label: 'Immature', value: '150000'},{label: 'Seedling', value: '75000'}
+            crop: 'Water Melon',  data: [
+                {label: 'Mature', value: '20000'},{label: 'Immature', value: '10000'},{label: 'Seedling', value: '5000'}
             ]
         },
+        // {
+        //     crop: 'Govt/Grazing Recours',  data: [
+        //         {label: 'Mature', value: '300000'},{label: 'Immature', value: '150000'},{label: 'Seedling', value: '75000'}
+        //     ]
+        // },
         {
             crop: 'Plantain',  data: [
                 {label: 'Mature', value: '1500'},{label: 'Immature', value: '750'},{label: 'Seedling', value: '375'}
@@ -651,26 +250,26 @@ const data = [
                 {label: 'Mature', value: '550000'},{label: 'Immature', value: '275000'},{label: 'Seedling', value: '137500'}
             ]
         },
-        {
-            crop: 'Farm Minimum',  data: [
-                {label: 'Mature', value: '120000'},{label: 'Immature', value: '60000'},{label: 'Seedling', value: '30000'}
-            ]
-        }, 
-        {
-            crop: 'Farm Fadama Minimum',  data: [
-                {label: 'Mature', value: '200000'},{label: 'Immature', value: '100000'},{label: 'Seedling', value: '50000'}
-            ]
-        }, 
-        {
-            crop: 'Other LGA HQ',  data: [
-                {label: 'Mature', value: '80000'},{label: 'Immature', value: '40000'},{label: 'Seedling', value: '20000'}
-            ]
-        },
-        {
-            crop: 'Rural Area',  data: [
-                {label: 'Mature', value: '60000'},{label: 'Immature', value: '30000'},{label: 'Seedling', value: '15000'}
-            ]
-        }, 
+        // {
+        //     crop: 'Farm Minimum',  data: [
+        //         {label: 'Mature', value: '120000'},{label: 'Immature', value: '60000'},{label: 'Seedling', value: '30000'}
+        //     ]
+        // }, 
+        // {
+        //     crop: 'Farm Fadama Minimum',  data: [
+        //         {label: 'Mature', value: '200000'},{label: 'Immature', value: '100000'},{label: 'Seedling', value: '50000'}
+        //     ]
+        // }, 
+        // {
+        //     crop: 'Other LGA HQ',  data: [
+        //         {label: 'Mature', value: '80000'},{label: 'Immature', value: '40000'},{label: 'Seedling', value: '20000'}
+        //     ]
+        // },
+        // {
+        //     crop: 'Rural Area',  data: [
+        //         {label: 'Mature', value: '60000'},{label: 'Immature', value: '30000'},{label: 'Seedling', value: '15000'}
+        //     ]
+        // }, 
         {
             crop: 'Others',  data: [
                 {label: 'Mature', value: '0'},{label: 'Immature', value: '0'},{label: 'Seedling', value: '0'}
