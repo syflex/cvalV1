@@ -73,7 +73,7 @@
 
 <script>
 
-import { QUploader } from "quasar";
+import { QUploader, LocalStorage } from "quasar";
 import cropList from './../../data/crop/crop_list.js'
 import Trees1 from './../../data/crop/tree.js'
 import cropPrice from './../../data/crop/crop_price.js'
@@ -89,7 +89,7 @@ export default {
             image: '',
             form:{
                 valuer_id: '1',
-                claimant_id: 'NNPC/MCO/AKK/LOT12/'+ Date.now(),
+                claimant_id: 'NNPC/MCO/AKK/LOT12/',
                 first_name: null,
                 last_name: null,
                 other_name: null,
@@ -134,6 +134,7 @@ export default {
     },
     
     methods:{
+
         save_entery(){
             
                 this.$v.form.$touch()
@@ -149,7 +150,13 @@ export default {
                     message: 'Crop Entry saved successfully'
                 })
                 this.loading = false;
-                this.opened = false;                                        
+                this.opened = false; 
+
+                let number = this.$q.localStorage.getItem('cvalCounter');
+                number = Number(number);
+                number += 1;
+                this.$q.localStorage.set('cvalCounter', number)    
+
                 this.clearEntery();                    
 
             })
@@ -242,7 +249,7 @@ export default {
       },
     
     clearEntery(){
-        this.form.claimant_id = 'NNPC/MCO/AKK/LOT12/'+ Date.now(),
+        this.form.claimant_id = 'NNPC/MCO/AKK/LOT12/',
             this.form.first_name = null;
             this.form.last_name = null;
             this.form.other_name = null;
@@ -263,7 +270,14 @@ export default {
                     price: null,
                     value: null,
                 })     
-            }     
+            }    
+            
+            let number = this.$q.localStorage.getItem('cvalCounter');
+            number = Number(number);
+            number += 1;
+            let size = 6;
+            var s = "000000" + number;
+            this.form.claimant_id = this.form.claimant_id + s.substr(s.length-size)
     }
 
     },
@@ -278,9 +292,17 @@ export default {
                 price: null,
                 value: null,
             })     
-        }        
-    }
+        }     
+        
+        let number = this.$q.localStorage.getItem('cvalCounter');
+        number = Number(number);
+        number += 1;
+        let size = 6;
+        var s = "000000" + number;
+        this.form.claimant_id = this.form.claimant_id + s.substr(s.length-size)
+    },
 
+    
 }
 </script>
 

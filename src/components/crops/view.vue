@@ -1,6 +1,7 @@
 <template>
     <div>
-        <q-table title="Crops Claimant's Table" :data="tableData" :columns="columns" row-key="name" />
+        <q-table title="Crops Claimant's Table" :data="tableData" :columns="columns" row-key="name"  
+        :rowsPerPage="10" rows-per-page-label="10"/>
         <q-btn disable="" label="Sync with server" color="secondary" icon="email" size="xl" @click="sync" class="full-width q-mt-xl"/>
     </div>
 </template>

@@ -5,8 +5,16 @@
 </template>
 
 <script>
+import { LocalStorage } from 'quasar'
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+    if(LocalStorage.getItem('cvalCounter')){
+
+    }else{
+      LocalStorage.set('cvalCounter', "0")
+    }    
+  },
 }
 </script>
 
