@@ -1,4 +1,348 @@
 const data = [
+    {
+        type: 'Trees', 
+        data: [
+            {
+                label: 'Mango', value: 'Mango'
+            }, 
+            {
+                label: 'Mango Improved', value: 'Mango Improved'
+            },
+            {
+                label: 'Guava', value: 'Guava'
+            }, 
+            {
+                label: 'Guava Improved', value: 'Guava Improved'
+            },  
+            {
+                label: 'Orang', value: 'Orang'
+            },
+            {
+                label: 'Plantain', value: 'Plantain'
+            },
+            {
+                label: 'Banana', value: 'Banana'
+            },
+            {
+                label: 'Dorowa(Locus Bean)', value: 'Dorowa(Locus Bean)'
+            },
+            {
+                label: 'Dabino', value: 'Dabino'
+            }, 
+            {
+                label: 'Gamji', value: 'Gamji'
+            },
+            {
+                label: 'Kadanga(Shea Butter)', value: 'Kadanga(Shea Butter)'
+            }, 
+            {
+                label: 'Rimi', value: 'Rimi'
+            },
+            {
+                label: 'Tsamia', value: 'Tsamia'
+            },             
+            {
+                label: 'Madaci', value: 'Madaci'
+            }, 
+            {
+                label: 'kanya', value: 'kanya'
+            },
+            {
+                label: 'Marke', value: 'Marke'
+            }, 
+            {
+                label: 'Gawo', value: 'Gawo'
+            },
+            {
+                label: 'Tom Dom', value: 'Tom Dom'
+            },
+            {
+                label: 'Fig Tree', value: 'Fig Tree'
+            },
+            {
+                label: 'Gabarua', value: 'Gabarua'
+            },
+            {
+                label: 'Kandar', value: 'Kandar'
+            },
+            {
+                label: 'Aduwa', value: 'Aduwa'
+            }, 
+            {
+                label: 'Silk Cotton (Rimi)', value: 'Silk Cotton (Rimi)'
+            }, 
+            {
+                label: 'Rubber', value: 'Rubber'
+            }, 
+            {
+                label: 'Goruba', value: 'Goruba'
+            },
+            {
+                label: 'Giginya', value: 'Giginya'
+            }, 
+            {
+                label: 'Kuka', value: 'Kuka'
+            },
+            {
+                label: 'Madobiya', value: 'Madobiya'
+            }, 
+            {
+                label: 'Goba', value: 'Goba'
+            },
+            {
+                label: 'Gwanda', value: 'Gwanda'
+            }, 
+            {
+                label: 'Lemon', value: 'Lemon'
+            }, 
+            {
+                label: 'Raphia Palm', value: 'Raphia Palm'
+            }, 
+            {
+                label: 'Lime', value: 'Lime'
+            }, 
+            {
+                label: 'Eucalyptus', value: 'Eucalyptus'
+            }, 
+            {
+                label: 'Lemun Zaki', value: 'Lemun Zaki'
+            },
+            {
+                label: 'Tsamiya(Tarime)', value: 'Tsamiya(Tarime)'
+            },
+            {
+                label: 'Lemun Tangerine', value: 'Lemun Tangerine'
+            }, 
+            {
+                label: 'Albijuja', value: 'Albijuja'
+            },
+            {
+                label: 'Neem (Dogo Yaro)', value: 'Neem (Dogo Yaro)'
+            },
+            {
+                label: 'Mahogany', value: 'Mahogany'
+            }, 
+            {
+                label: 'Aduwa', value: 'Aduwa'
+            },
+            {
+                label: 'Kashiya', value: 'Kashiya'
+            }, 
+            {
+                label: 'Dalbejiya', value: 'Dalbejiya'
+            },
+            {
+                label: 'Dusha', value: 'Dusha'
+            }, 
+            {
+                label: 'Gurijiya', value: 'Gurijiya'
+            }, 
+            {
+                label: 'Gawasa', value: 'Gawasa'
+            },
+            {
+                label: 'Katsari', value: 'Katsari'
+            }, 
+            {
+                label: 'Kurna', value: 'Kurna'
+            },
+            {
+                label: 'Kirinya', value: 'Kirinya'
+            }, 
+            {
+                label: 'Maje', value: 'Maje'
+            },
+            {
+                label: 'Franshana', value: 'Franshana'
+            }, 
+            {
+                label: 'Sansami', value: 'Sansami'
+            },
+            {
+                label: 'Baushe', value: 'Baushe'
+            }, 
+            {
+                label: 'Danya', value: 'Danya'
+            }, 
+            {
+                label: 'Fasadabur', value: 'Fasadabur'
+            },
+            {
+                label: 'Ruman', value: 'Ruman'
+            }, 
+            {
+                label: 'Magariya', value: 'Magariya'
+            },
+            {
+                label: 'Taura', value: 'Taura'
+            }, 
+            {
+                label: 'J/Kafiri', value: 'J/Kafiri'
+            }, 
+            {
+                label: 'Kalgo Tree', value: 'Kalgo Tree'
+            },
+            {
+                label: 'Kalgo Shub', value: 'Kalgo Shub'
+            }, 
+            {
+                label: 'Ayaba', value: 'Ayaba'
+            }, 
+            {
+                label: 'Chediya', value: 'Chediya'
+            },
+            {
+                label: 'Durumi', value: 'Durumi'
+            },
+            {
+                label: 'Aduruku', value: 'Aduruku'
+            },
+            {
+                label: 'Pawpaw', value: 'Pawpaw'
+            }, 
+            {
+                label: 'Kawari', value: 'Kawari'
+            },
+            {
+                label: 'Lalle', value: 'Lalle'
+            }, 
+            {
+                label: 'Morianga Alicafera', value: 'Morianga Alicafera'
+            },
+            {
+                label: 'Giyaya', value: 'Giyaya'
+            }, 
+            {
+                label: 'Dinya', value: 'Dinya'
+            }, 
+            {
+                label: 'Graps', value: 'Graps'
+            },
+            {
+                label: 'Pear', value: 'Pear'
+            },
+            {
+                label: 'Kantakara', value: 'Kantakara'
+            }, 
+            {
+                label: 'Matsagi', value: 'Matsagi'
+            },
+            {
+                label: 'Geza', value: 'Geza'
+            }, 
+            {
+                label: 'Doka', value: 'Doka'
+            },
+            {
+                label: 'Turare', value: 'Turare'
+            }, 
+            {
+                label: 'Gmshina', value: 'Gmshina'
+            }, 
+            {
+                label: 'Gakwara(Domesticated)', value: 'Gakwara(Domesticated)'
+            },
+            {
+                label: 'Gakwara(Wild)', value: 'Gakwara(Wild)'
+            }, 
+            {
+                label: 'Zuwa', value: 'Zuwa'
+            },
+            {
+                label: 'Aliliba', value: 'Aliliba'
+            }, 
+            {
+                label: 'Goro', value: 'Goro'
+            },
+            {
+                label: 'Cashew', value: 'Cashew'
+            }, 
+            {
+                label: 'Baure', value: 'Baure'
+            }, 
+            {
+                label: 'Gwanda Dawa', value: 'Gwanda Dawa'
+            },
+            {
+                label: 'Faru', value: 'Faru'
+            }, 
+            {
+                label: 'Zogale', value: 'Zogale'
+            },
+            {
+                label: 'Indigo', value: 'Indigo'
+            },
+            {
+                label: 'Iroko', value: 'Iroko'
+            },
+            {
+                label: 'Obeche', value: 'Obeche'
+            },
+            {
+                label: 'Abura', value: 'Abura'
+            },
+            {
+                label: 'Ogbano', value: 'Ogbano'
+            },
+            {
+                label: 'Daliba', value: 'Daliba'
+            },
+            {
+                label: 'Camwood', value: 'Camwood'
+            },
+            {
+                label: 'Gum Arabic', value: 'Gum Arabic'
+            },
+            {
+                label: 'Pepper fruit', value: 'Pepper fruit'
+            },
+            {
+                label: 'Calabash Tree', value: 'Calabash Tree'
+            },
+            {
+                label: 'Umbrella Tree', value: 'Umbrella Tree'
+            },
+            {
+                label: 'Gelin', value: 'Gelin'
+            },
+            {
+                label: 'Palm Tree', value: 'Palm Tree'
+            }, 
+            {
+                label: 'Kawo', value: 'Kawo'
+            },
+            {
+                label: 'Atili', value: 'Atili'
+            }, 
+            {
+                label: 'Passion Fruit', value: 'Passion Fruit'
+            }, 
+            {
+                label: 'Kuhu Tree', value: 'Kuhu Tree'
+            },
+            {
+                label: 'Sabara Tree', value: 'Sabara Tree'
+            }, 
+            {
+                label: 'Sabara Shrub', value: 'Sabara Shrub'
+            },
+            {
+                label: 'Shuwaka', value: 'Shuwaka'
+            }, 
+            {
+                label: 'Nuhu', value: 'Nuhu'
+            },
+            {
+                label: 'Coconut', value: 'Coconut'
+            }, 
+            {
+                label: 'Tsada', value: 'Tsada'
+            }, 
+            {
+                label: 'Bagaruwa', value: 'Bagaruwa'
+            }
+        ]
+    }, 
     
     {
         type: 'Crops', 
@@ -134,10 +478,7 @@ const data = [
             },
             // {
             //     label: 'Govt/Grazing Recours', value: 'Govt/Grazing Recours'
-            // }, 
-            {
-                label: 'Plantain', value: 'Plantain'
-            },
+            // },             
             // {
             //     label: 'Farm Minimum', value: 'Farm Minimum'
             // }, 
