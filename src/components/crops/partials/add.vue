@@ -4,8 +4,7 @@
 
 
         <q-dialog  v-model="opened">
-            <q-card>
-            
+            <q-card>            
                 <q-bar>
                     <div class="text-h6">Capture Signature</div>
                     <div>{{Date.now()}}</div>
@@ -23,8 +22,9 @@
                 </q-card-section>
                
                 <q-card-section>
-                    <q-btn no-caps color="accent" label="Accept & sign" @click="signature = true , fingerPrint = false" class="full-width"/>
-                    <q-btn no-caps color="accent" label="Accept & thumb print" @click="fingerPrint = true, signature = false" class="full-width"/>
+                    <q-btn no-caps color="accent" label="Accept & sign" @click="signature = true , fingerPrint = false, upload = false " class="full-width"/>
+                    <q-btn no-caps color="accent" label="Accept & thumb print" @click="fingerPrint = true, signature = false, upload = false" class="full-width"/>
+                    <q-btn no-caps color="accent" label="Upload Sign/Finger Print" @click="upload = true , fingerPrint = false, signature = false" class="full-width"/>
                 </q-card-section>
 
                 <q-card-section v-if="signature">
@@ -40,7 +40,7 @@
                         <div style="max-width: 200px" class="bg-white">
                             <img :src="finger" width="50%">     
                             <span v-if="loading" color="white" :loading="loading" no-caps>
-                                    <q-spinner-ios slot="loading" class="q-mr-sm"></q-spinner-ios>                                
+                                <q-spinner-ios slot="loading" class="q-mr-sm"></q-spinner-ios>                                
                             </span>                 
                         </div>
                     </div>
@@ -49,7 +49,16 @@
                         <q-btn v-if="finger" color="accent" @click="saveFinger">Save Finger Print</q-btn>
                         <q-btn  v-if="finger" color="negative" @click="finger = null">Undo</q-btn>
                     </div>
-                </q-card-section>            
+                </q-card-section> 
+
+                <q-card-section v-if="upload">
+                    <img :src="image ? image : ''" width="50%">
+                    <input v-if="!image" type="file" @change="onFileChange">
+                    <div>
+                        <q-btn color="accent" @click="saveImage">Save</q-btn>
+                        <q-btn color="negative" @click="removeImage">Undo</q-btn>
+                    </div>
+                </q-card-section>           
             </q-card>
         </q-dialog >
 
@@ -69,9 +78,11 @@ export default {
             opened: false,            
             signature: this.signature_p ? signature_p : false,
             fingerPrint: false,
+            upload: false,
             loading: false,
             fingersList: fingers,
             finger: null,
+            image: null,
         }
     },
 
@@ -81,32 +92,56 @@ export default {
     
     methods:{
        
-    undo() {
-        this.$refs.signaturePad.undoSignature();
-      },
+        undo() {
+            this.$refs.signaturePad.undoSignature();
+        },
 
-      save() {
-        const { isEmpty, data } = this.$refs.signaturePad.saveSignature();        
-        this.$emit('clicked', data)
-      },
-      enrole(){
-        this.loading = true
-        setTimeout(() => {
-              this.loading = false
-              this.finger = this.fingersList[Math.floor(Math.random() * this.fingersList.length)];
-            }, 3500)
-      },
+        save() {
+            const { isEmpty, data } = this.$refs.signaturePad.saveSignature();        
+            this.$emit('clicked', data)
+        },
 
-      saveFinger() {
-        this.$emit('clicked', this.finger)
+        enrole(){
+            this.loading = true
+            setTimeout(() => {
+                    this.loading = false
+                    this.finger = this.fingersList[Math.floor(Math.random() * this.fingersList.length)];
+                }, 3500)
+        },
+
+        saveFinger() {
+            this.$emit('clicked', this.finger)
+        },
+
+        onFileChange(e) {
+        var files = e.target.files || e.dataTransfer.files;
+        if (!files.length)
+            return;
+        this.createImage(files[0]);
+        },
+
+        createImage(file) {
+        var image = new Image();
+        var reader = new FileReader();
+        var vm = this;
+
+        reader.onload = (e) => {
+            vm.image = e.target.result;
+            this.image = e.target.result;        
+        };
+        reader.readAsDataURL(file);
+        },
+
+        saveImage() {
+            this.$emit('clicked', this.image)
+        },
+
+        removeImage: function (e) {
+        this.image = null;
+        },
+
+
     },
-
-
-    },
-
-    mounted () {
-        
-    }
 
 }
 </script>

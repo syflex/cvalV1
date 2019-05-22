@@ -30,7 +30,7 @@ module.exports = function (ctx) {
       components: [
         'QLayout','QHeader','QDrawer','QPageContainer','QPage','QToolbar','QToolbarTitle','QBtn','QIcon','QList',
         'QItem','QItemSection','QItemLabel','QCard','QCardSection','QSeparator','QInput','QSelect','QDialog','QSpinnerIos',
-        'QTable', 'QTh', 'QTr', 'QTd','QBar','QSpace','QTooltip'
+        'QTable', 'QTh', 'QTr', 'QTd','QBar','QSpace','QTooltip','QDate','QPopupProxy'
       ],
 
       directives: [

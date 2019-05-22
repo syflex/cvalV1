@@ -9,7 +9,16 @@
                 <!-- <q-input outlined v-model="form.other_name" placeholder="Claimant Other Names"/> -->
                 <q-input dense outlined v-model="form.location" placeholder="Claimant Location"/>
                 <!-- <q-input outlined v-model="form.community" placeholder="Claimant Community"/> -->
-                <q-input dense outlined v-model="form.coordinates" placeholder="Coodinates"/>                
+                <q-input dense outlined v-model="form.coordinates" placeholder="Coodinates"/>  
+                <q-input dense outlined v-model="form.date" mask="date" placeholder="Valuation Date">
+                    <template v-slot:append>
+                        <q-icon name="event" class="cursor-pointer">
+                        <q-popup-proxy>
+                            <q-date v-model="form.date" minimal/>
+                        </q-popup-proxy>
+                        </q-icon>
+                    </template>
+                </q-input>          
             </q-card-section>
             <q-card-section class="col-5">                
                 <img :src="image ? form.image : 'statics/user.jpg'" width="40%">
@@ -29,33 +38,33 @@
             </q-card-section>
         </q-card>
 
-    <q-separator class="bg-grey-10 q-mt-md"/>
-    <q-separator class="bg-grey-10 q-mb-sm"/>
+    <q-separator class="bg-grey-10"/>
+    <q-separator class="bg-grey-10 q-mb-xs"/>
         
     <q-card flat v-for="(crop, index) in form.crops" v-bind:key="index" class="row">
-        <div class="col-3">
-            <q-select outlined v-model="crop.type" float-label="Crop Type" :options="typeOptions" @input="filterType(crop.type)"/>
+        <div class="col-3 q-my-xs">
+            <q-select dense outlined v-model="crop.type" float-label="Crop Type" :options="typeOptions" @input="filterType(crop.type)"/>
         </div>
-        <div class="col-2">
-            <q-select outlined filter v-model="crop.name" float-label="Crop Name" :options="filteredList" />
+        <div class="col-2 q-my-xs">
+            <q-select dense outlined filter v-model="crop.name" float-label="Crop Name" :options="filteredList" />
         </div> 
-        <div class="col-2">
-            <q-select outlined filter v-model="crop.maturity" float-label="Crop Maturity" :options="maturityOptions" 
+        <div class="col-2 q-my-xs">
+            <q-select dense outlined filter v-model="crop.maturity" float-label="Crop Maturity" :options="maturityOptions" 
             @input="check(crop.name,crop.maturity,index)"
             />
         </div>        
                 
-        <div class="col-2">
-            <q-input outlined v-model="crop.unit" float-label="Quantit eg(5)" numeric-keyboard-toggle placeholder="Quantity eg(5)"/>
+        <div class="col-2 q-my-xs">
+            <q-input dense outlined v-model="crop.unit" float-label="Quantit eg(5)" numeric-keyboard-toggle placeholder="Quantity eg(5)"/>
         </div>
-        <div class="col-1">
-            <q-input outlined v-model="crop.price" float-label="Rate (N)" numeric-keyboard-toggle placeholder="Rate (N)"/>
+        <div class="col-1 q-my-xs">
+            <q-input dense outlined v-model="crop.price" float-label="Rate (N)" numeric-keyboard-toggle placeholder="Rate (N)"/>
         </div>
-        <div class="col-1">
-            <q-input outlined :value="crop.value = (Number(crop.unit) * Number(crop.price))" float-label="Rate (N)" numeric-keyboard-toggle placeholder="Rate (N)"/>
+        <div class="col-1 q-my-xs">
+            <q-input dense outlined :value="crop.value = (Number(crop.unit) * Number(crop.price))" float-label="Rate (N)" numeric-keyboard-toggle placeholder="Rate (N)"/>
         </div>
 
-        <div class="col-lg-1">
+        <div class="col-1 q-my-xs">
            <q-btn color="red" size="sm" @click="removeLine(index)" icon="delete" round/>    
         </div>
         <q-btn color="negative" label="add new row" size="sm" v-if="index + 1 === form.crops.length" @click="addLine" icon="add" class="full-width q-my-sm" />
@@ -89,7 +98,7 @@ export default {
             image: '',
             form:{
                 valuer_id: '1',
-                claimant_id: 'NNPC/MCO/AKK/LOT12/',
+                claimant_id: 'NNPC/MCO///',
                 first_name: null,
                 last_name: null,
                 other_name: null,
@@ -97,6 +106,7 @@ export default {
                 community: null,
                 coordinates: null,
                 image: null,
+                date: null,
                 c_signature: null,
                 crops: [],
             },
@@ -247,7 +257,7 @@ export default {
       },
     
     clearEntery(){
-        this.form.claimant_id = 'NNPC/MCO/AKK/LOT12/',
+        this.form.claimant_id = 'NNPC/MCO///',
             this.form.first_name = null;
             this.form.last_name = null;
             this.form.other_name = null;

@@ -2,7 +2,7 @@
 <div>
     <q-btn no-caps label="Signature" @click="opened = true" />
 
-    <q-modal v-model="opened" :content-css="{minWidth: '80vw', minHeight: '80vh'}">
+  <q-modal v-model="opened" :content-css="{minWidth: '80vw', minHeight: '80vh'}">
   <q-modal-layout>
     <q-toolbar slot="header">
       <q-btn flat round dense v-close-overlay  icon="keyboard_arrow_left" />
@@ -36,8 +36,8 @@ data () {
   },
 
   methods:{
-        undo() {
-        this.$refs.signaturePad.undoSignature();
+      undo() {
+      this.$refs.signaturePad.undoSignature();
       },
       save() {
         const { isEmpty, data } = this.$refs.signaturePad.saveSignature();       
